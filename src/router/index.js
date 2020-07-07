@@ -37,5 +37,10 @@ export default new Router({
       name: 'register',
       component: () => import('@/views/Register'),
     },
+    {
+      path: '*',
+      name: '404',
+      component: () => import('@/views/404'),
+    },
   ]
 })
