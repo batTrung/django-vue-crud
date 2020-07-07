@@ -1,0 +1,7 @@
+export const FETCH_START = 'fetchStart'
+export const FETCH_END = 'fetchEnd'
+export const SET_BOOKS = 'setBooks'
+export const SET_BOOK = 'setBook'
+export const SET_ERROR = 'setError'
+export const SET_AUTH = 'setAuth'
+export const PURGE_AUTH = 'purgeAuth'
