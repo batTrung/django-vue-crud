@@ -203,7 +203,7 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST = config(
     'CORS_ORIGIN_WHITELIST',
-    default='http://localhost:8080,http://127.0.0.1:8080',
+    default='http://localhost:8080,http://localhost:8000',
     cast=Csv(),
 )
 
