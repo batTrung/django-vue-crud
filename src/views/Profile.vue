@@ -11,4 +11,3 @@ export default {
   title: 'Trang cá nhân',
 }
 </script>
-
