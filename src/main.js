@@ -13,6 +13,7 @@ import * as filters from '@/common/filters'
 import { titleMixin } from '@/common/mixins'
 
 import ApiService from '@/common/api.service'
+import JwtService from '@/common/jwt.service'
 
 [
   Vuelidate,
@@ -31,7 +32,15 @@ Object.keys(filters).forEach(key => {
 })
 
 router.beforeEach((to, from, next) => {
-  return Promise.all([store.dispatch(CHECK_AUTH)]).then(next)
+  const toLogin = !JwtService.getAccess() && to.matched.some(record => record.meta.isRequiresAuth)
+  if (toLogin) {
+    next({
+      name: 'login',
+      query: { redirect: to.fullPath }
+    })
+  } else {
+    return Promise.all([store.dispatch(CHECK_AUTH)]).then(next)
+  }
 })
 
 new Vue({

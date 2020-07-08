@@ -19,8 +19,8 @@
             </router-link>
           </b-nav-form>
           <b-nav-item-dropdown :text="currentUser.username" right v-else>
-            <b-dropdown-item href="#">Trang cá nhân</b-dropdown-item>
-            <b-dropdown-item href="#">Cài đặt</b-dropdown-item>
+            <b-dropdown-item :to="{name: 'profile', params: {username: currentUser.username}}">Trang cá nhân</b-dropdown-item>
+            <b-dropdown-item :to="{name: 'settings'}">Cài đặt</b-dropdown-item>
             <div class="dropdown-divider"></div>
             <b-dropdown-item @click="logout">Đăng xuất</b-dropdown-item>
           </b-nav-item-dropdown>

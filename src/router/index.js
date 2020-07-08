@@ -38,6 +38,22 @@ export default new Router({
       component: () => import('@/views/Register'),
     },
     {
+      path: '/settings',
+      name: 'settings',
+      component: () => import('@/views/Settings'),
+      meta: {
+        isRequiresAuth: true,
+      },
+    },
+    {
+      path: '/profile/:username',
+      name: 'profile',
+      component: () => import('@/views/Profile'),
+      meta: {
+        isRequiresAuth: true,
+      },
+    },
+    {
       path: '*',
       name: '404',
       component: () => import('@/views/404'),

@@ -15,7 +15,7 @@ import {
 const state = {
   errors: null,
   user: {},
-  isAuthenticated: false,
+  isAuthenticated: !!JwtService.getAccess(),
 }
 
 const getters = {

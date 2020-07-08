@@ -12,13 +12,13 @@
                 <input type="text" name='search' placeholder="Tên sách, miêu tả..." class="form-control">
               </div>
             </div>
-            <div class="col-12 col-lg-4">
+<!--             <div class="col-12 col-lg-4">
               <select name="" class="custom-select">
                 <option value="">Tác giả</option>
                 <option value="C">C</option>
                 <option value="E">E</option>
               </select>
-            </div>
+            </div> -->
             <div class="col-12 col-lg-2">
               <button class="btn btn-primary btn-block" type="submit">
                 <i class="fas fa-search mr-1"></i> Tìm kiếm
