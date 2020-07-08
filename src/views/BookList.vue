@@ -48,7 +48,6 @@
                 <i class="fas fa-sort"></i> Ngày tạo</th>
               <th scope="col" @click="orderingBook('price')">
                 <i class="fas fa-sort"></i> Giá</th>
-              <!-- <th scope="col">Ảnh</th> -->
             </tr>
           </thead>
           <tbody>
@@ -59,7 +58,6 @@
               <td>{{ book.timesince }}</td>
               <td v-if="book.price">{{ book.price | intcomma }}đ</td>
               <td v-else>Free</td>
-              <!-- <td><img :src="book.photo" alt="" class="w-25"></td> -->
               <td v-if="currentUser.username == book.author">
                 <div class="d-flex">
                   <button type="button" class="btn btn-warning btn-sm mr-2" @click="showEditModal(book.slug)">
